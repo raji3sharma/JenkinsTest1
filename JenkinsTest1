@@ -18,6 +18,8 @@ pipeline {
                 bat '%python_path% test.py'
                 script {
                     def myVariable = "Hello"
+                    def process = ["python", "test.py"].execute()
+                    echo "after process"
                     echo "$myVariable"
                     def process = "$python_path test.py".execute()                
                     process.waitFor()
