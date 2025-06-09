@@ -1,5 +1,6 @@
 pipeline {
     agent any
+ 
     stages {
         stage('checkout') {
             steps {
@@ -10,8 +11,12 @@ pipeline {
             }
         }
         stage('run test') {
+            environment {
+                python_path = 'C:\Work\Python'
+                DB_ENGINE    = 'sqlite'
+            }
             steps {
-                bat 'python test.py'
+                bat '%python_path%\python test.py'
                
             }
         }
