@@ -13,8 +13,7 @@ pipeline {
         stage('run test') {
             environment {
                 python_path = 'C:\\Work\\Python\\python.exe'
-                DB_ENGINE    = 'sqlite'
-            }
+          }
             steps {
                 bat '%python_path% test.py'
                
