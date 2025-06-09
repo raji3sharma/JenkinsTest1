@@ -1,0 +1,3 @@
+@echo off
+echo Running Python script...
+print("Hello from python")
