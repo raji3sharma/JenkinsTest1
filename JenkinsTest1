@@ -18,7 +18,7 @@ pipeline {
                 bat '%python_path% test.py'
 
                 def myVariable = "Hello"
-                echo "%myVariable%
+                echo "$myVariable"
                 //def process = "$python_path test.py".execute()                
                 //process.waitFor()
                 //def output = process.text
