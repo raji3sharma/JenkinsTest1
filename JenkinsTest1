@@ -17,10 +17,12 @@ pipeline {
             steps {
                 bat '%python_path% test.py'
 
-                def process = "$python_path test.py".execute()                
-                process.waitFor()
-                def output = process.text
-                println "Output from Python script: ${output}"
+                def myVariable = "Hello"
+                echo "%myVariable%
+                //def process = "$python_path test.py".execute()                
+                //process.waitFor()
+                //def output = process.text
+                //println "Output from Python script: ${output}"
                
             }
         }
