@@ -1,1 +1,19 @@
-JenkinsTest1
+pipeline {
+    agent any
+    stages {
+        stage('checkout') {
+            steps {
+                // Get some code from a GitHub repository
+                //git 'https://github.com/raji3sharma/JenkinsTest1.git'
+                git branch: 'main', credentialsId: 'git_id', url: 'https://github.com/raji3sharma/JenkinsTest1.git'
+
+            }
+        }
+        stage('run test') {
+            steps {
+                echo "Running test cases !"
+               
+            }
+        }
+    }
+}
