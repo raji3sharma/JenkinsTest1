@@ -1,5 +1,6 @@
 def add():
   print("Hello from python")
   return 555
-add()
+if __name__ == "__main__":
+       add()
 
